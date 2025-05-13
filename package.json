@@ -9,9 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+<<<<<<< HEAD
     "autoprefixer": "^10.4.21",
     "next": "15.2.2",
     "postcss": "^8.5.3",
+=======
+    "lucide-react": "^0.507.0",
+    "next": "15.2.2",
+>>>>>>> 441e048 (add AI autopilot SEO feature section to homepage)
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
@@ -23,7 +28,11 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.2.2",
+<<<<<<< HEAD
     "tailwindcss": "^4.1.5",
+=======
+    "tailwindcss": "^4",
+>>>>>>> 441e048 (add AI autopilot SEO feature section to homepage)
     "typescript": "^5"
   }
 }

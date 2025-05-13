@@ -10,6 +10,7 @@ export default function HomeLayout({ children }: { children: React.ReactNode }) 
             <li><a href="/home/aiarticlewriter" className="block p-2 hover:bg-gray-700">AI Article Writer</a></li>
             <li><a href="/home/alltools" className="block p-2 hover:bg-gray-700">All Tools</a></li>
             <li><a href="/home/mycontent" className="block p-2 hover:bg-gray-700">My Content</a></li>
+               <li><a href="/home/activate" className="block p-2 hover:bg-gray-700">activate</a></li>
           </ul>
         </nav>
   
