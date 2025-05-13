@@ -15,7 +15,7 @@ export default function HomeLayout({ children }: { children: React.ReactNode }) 
         </nav>
   
         {/* Right Side - Placeholder for Content */}
-        <main className="w-3/4 p-4">
+        <main className="w-3/4 bg-gray-200 p-4 overflow-y-auto">
           {children}
         </main>
       </div>
