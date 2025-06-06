@@ -38,6 +38,6 @@ if (!MONGODB_URL) {
   throw new Error('Please define MONGODB_URL in your environment variables');
 }
 
-export async function dbConnect() {
+export default async function dbConnect() {
   return mongoose.connect(MONGODB_URL);
 }
