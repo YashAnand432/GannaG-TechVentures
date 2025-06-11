@@ -31,9 +31,9 @@ const creditTransactionSchema = new mongoose.Schema({
     },
     orderId : {type : String},
     sessionId : {type : String},
-    subscriptionPlanId : {
+    CreditPackageId : {
         type : mongoose.Schema.Types.ObjectId,
-        ref : 'SubscriptionPlan'
+        ref : 'CreditPackage'
     },
 
     // balance tracking
