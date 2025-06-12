@@ -100,8 +100,9 @@ const userSchema = new mongoose.Schema({
   timestamps: true
 });
 
-// Indexes for performance
 userSchema.index({ email: 1 });
+userSchema.index({ username: 1 }); 
+userSchema.index({ phoneNumber: 1 }, { sparse: true }); 
 userSchema.index({ razorpayCustomerId: 1 });
 
 export default mongoose.models.User || mongoose.model('User', userSchema);
