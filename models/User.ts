@@ -17,7 +17,27 @@ const userSchema = new mongoose.Schema({
   // Profile Information
   firstName: { type: String, required: true, trim: true },
   lastName: { type: String, required: true, trim: true },
-  
+   username: { 
+    type: String, 
+    required: true, 
+    unique: true, 
+    trim: true,
+    lowercase: true,
+    minlength: 6
+  },
+  phoneNumber: { 
+    type: String, // ✅ CHANGED: to String for international formats
+    trim: true,
+    unique: true,
+    sparse: true // Allows multiple users to have no phone number
+  },
+   dateOfBirth: { 
+    type: Date 
+  },
+  country: { 
+    type: String, 
+    trim: true 
+  },
   // Credit Management (CORE OF THE SYSTEM)
   availableCredits: { 
     type: Number, 
