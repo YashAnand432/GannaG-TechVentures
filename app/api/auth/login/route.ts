@@ -4,10 +4,28 @@ import User from '@/models/User';
 import bcrypt from 'bcryptjs';
 import { sendEmail } from '@/lib/auth/sendLoginEmail'; // <- write this separately
 import crypto from 'crypto';
+import dbConnect from '@/lib/mongodb';
+
 
 export async function POST(req: NextRequest) {
   try {
+    await dbConnect();
+     
     const { email, password } = await req.json();
+    if(!email || !password){
+      return NextResponse.json(
+        { error : 'Email and password both are required'},
+        { status : 400},
+      )
+    }
+
+  //   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  //     if (!emailRegex.test(email)) {
+  //   return NextResponse.json(
+  //     { error: 'Invalid email format' },
+  //     { status: 400 }
+  //   );
+  // }
     const user = await User.findOne({ email });
 console.log("apple")
     if (!user || !user.password) {
