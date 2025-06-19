@@ -38,6 +38,8 @@ export async function POST(req: NextRequest) {
       process.env.JWT_SECRET!,
       { expiresIn: '1d' }
     );
+    console.log(token);
+
 
     // Set in cookie (optional: or just return)
     const response = NextResponse.json({ message: 'Login successful' });
